@@ -1,0 +1,38 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Калькуляция</a>
+    </div>
+    <div class="collapse navbar-collapse">
+
+      <ul class="nav navbar-nav">
+        <li><a href="#">Новое издание</a></li>
+        <li><a href="#">Новый выпуск</a></li>
+        <li><a href="{% url 'typutils:index' %}">Параметры</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+	<p class="navbar-text">Период:</p>
+	<li class="dropdown">
+	  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	    {{ period.text }} <b class="caret"></b>
+	  </a>
+	  <ul class="dropdown-menu">
+	    {% for p in month_list %}
+	    <li><a class="text-right" href="">{{ p.text }}</a></li>
+	    {% endfor %}
+	    <li class="divider"></a></li>
+	    <li><a href="">без ограничений</a></li>
+	  </ul>
+	</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
