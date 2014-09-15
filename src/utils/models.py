@@ -71,3 +71,11 @@ class WasteRatio(models.Model):
     class Meta:
         verbose_name = 'Норма отходов'
         verbose_name_plural = 'Нормы отходов'
+
+
+class PubSquare(models.Model):
+    """Площадь издания"""
+    value = models.IntegerField('Площадь издания')
+
+    def __str__(self):
+        return '[{}]'.format(self.value)
